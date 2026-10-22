@@ -58,3 +58,12 @@ def DobavitVMnozhestvoElement(M: list, element: int) -> None:
 
     M[0] += 1
     M[M[0]] = element
+
+def ObjedinitMnozhestva(M1: list, M2: list) -> list:
+    R = [PROBEL] * (M1[0] + M2[0] + 1)
+    R[0] = 0
+
+    for i in range(1, M1[0]+1): DobavitVMnozhestvoElement(R, M1[i])
+    for i in range(1, M2[0]+1): DobavitVMnozhestvoElement(R, M2[i])
+
+    return R[:R[0]+1]
