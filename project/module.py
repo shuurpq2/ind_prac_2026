@@ -35,3 +35,10 @@ def ElementNePrinadlezhitMnozhestvu(M: list, element: int) -> bool:
             break
 
     return otvet
+
+def UdalitIzMnozhestva(M: list, element: int) -> None:
+    for i in range(1, M[0]+1):
+        if M[i] == element:
+            M[i] = PROBEL
+            M[0] -= 1
+            break
