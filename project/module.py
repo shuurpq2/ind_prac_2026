@@ -12,3 +12,6 @@ def MnozhestvoNePusto(M: list) -> bool:
 
 def EstSvobodnoeMesto(M: list, N: int) -> bool:
     return M[0] < N
+
+def NetSvobodnogoMesta(M: list, N: int) -> bool:
+    return M[0] >= N
