@@ -42,3 +42,9 @@ def UdalitIzMnozhestva(M: list, element: int) -> None:
             M[i] = PROBEL
             M[0] -= 1
             break
+
+def DobavitVMnozhestvoElement(M: list, element: int) -> None:
+    if ElementPrinadlezhitMnozhestvu(M, element): return
+
+    M[0] += 1
+    M[M[0]] = element
