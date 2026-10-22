@@ -15,3 +15,13 @@ def EstSvobodnoeMesto(M: list, N: int) -> bool:
 
 def NetSvobodnogoMesta(M: list, N: int) -> bool:
     return M[0] >= N
+
+def ElementPrinadlezhitMnozhestvu(M: list, element: int) -> bool:
+    otvet = False
+
+    for i in range(1, M[0]+1):
+        if M[i] == element:
+            otvet = True
+            break
+
+    return otvet
