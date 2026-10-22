@@ -6,3 +6,6 @@ def SdelatMnozhestvoPustym(M: list) -> None:
 
 def MnozhestvoPusto(M: list) -> bool:
     return M[0] == 0
+
+def MnozhestvoNePusto(M: list) -> bool:
+    return M[0] != 0
