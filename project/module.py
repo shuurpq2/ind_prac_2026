@@ -37,11 +37,21 @@ def ElementNePrinadlezhitMnozhestvu(M: list, element: int) -> bool:
     return otvet
 
 def UdalitIzMnozhestva(M: list, element: int) -> None:
+    udalen_index = 0
+
     for i in range(1, M[0]+1):
         if M[i] == element:
             M[i] = PROBEL
-            M[0] -= 1
+            udalen_index = i
             break
+
+    if udalen_index < 1: return
+
+    for i in range(udalen_index+1, M[0]+1):
+        M[i-1] = M[i]
+        M[i] = PROBEL
+
+    M[0] -= 1
 
 def DobavitVMnozhestvoElement(M: list, element: int) -> None:
     if ElementPrinadlezhitMnozhestvu(M, element): return
