@@ -67,3 +67,10 @@ def ObjedinitMnozhestva(M1: list, M2: list) -> list:
     for i in range(1, M2[0]+1): DobavitVMnozhestvoElement(R, M2[i])
 
     return R[:R[0]+1]
+
+def VychitanieMnozhestv(M1: list, M2: list) -> list:
+    R = M1.copy()
+
+    for i in range(1, M2[0]+1): UdalitIzMnozhestva(R, M2[i])
+
+    return R[:R[0]+1]
