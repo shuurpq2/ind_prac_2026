@@ -126,3 +126,22 @@ def TestElementPrinadlezhitMnozhestvu():
     print("Функция проверки принадлежности элемента ко множеству успешно отработала")
 
 TestElementPrinadlezhitMnozhestvu()
+
+def TestElementNePrinadlezhitMnozhestvu():
+    N = 10
+    M = [PROBEL] * (N+1) # Создаем множество длиной N+1 (+1 для возможности индексации от 1 до N)
+
+    M[0] = 3 # Заполняем множество элементами 
+    M[1] = 4
+    M[2] = 2
+    M[3] = 9
+
+    assert not ElementNePrinadlezhitMnozhestvu(M, M[2]) # Вызываем проверяемую функцию (элемент не принадлежит множеству) и тут же проверяем ответ
+    assert len(M) == N+1 # Проверяем, осталась ли длина прежней
+    assert M[1] == 4 and M[2] == 2 and M[3] == 9 # Проверка, остались ли элементы множества неизменны
+
+    assert ElementNePrinadlezhitMnozhestvu(M, 500) # Вызываем проверяемую функцию (элемент не принадлежит множеству) и тут же проверяем ответ
+
+    print("Функция проверки отсутствия принадлежности элемента ко множеству успешно отработала")
+
+TestElementNePrinadlezhitMnozhestvu()

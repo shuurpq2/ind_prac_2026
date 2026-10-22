@@ -25,3 +25,13 @@ def ElementPrinadlezhitMnozhestvu(M: list, element: int) -> bool:
             break
 
     return otvet
+
+def ElementNePrinadlezhitMnozhestvu(M: list, element: int) -> bool:
+    otvet = True
+
+    for i in range(1, M[0]+1):
+        if M[i] == element:
+            otvet = False
+            break
+
+    return otvet
