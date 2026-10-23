@@ -66,3 +66,6 @@ def DostatIzMnozhestva(M: list, index: int) -> int:
     UdalitIzMnozhestva(M, element)
 
     return element
+
+def ZavershitRabotu() -> None:
+    print("Работа завершена")

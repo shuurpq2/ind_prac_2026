@@ -218,7 +218,7 @@ def TestDostatIzMnozhestva():
 
     dostat_element = M[2]
     print(f"Множество до изъятия элемента: {M}")
-    element = DostatIzMnozhestva(M, 2) # Вызываем проверяемую функцию (добавить в множество)
+    element = DostatIzMnozhestva(M, 2) # Вызываем проверяемую функцию (достать из множества)
     print(f"Множество после изъятия элемента: {M}")
     print(f"Изъятый элемент: {element}")
 
@@ -236,3 +236,8 @@ def TestDostatIzMnozhestva():
     print("Функция изъятия элемента во множества отработала успешно")
 
 TestDostatIzMnozhestva()
+
+def TestZavershitRabotu():
+    ZavershitRabotu() # Вызываем проверяемую функцию
+
+TestZavershitRabotu()
