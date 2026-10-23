@@ -58,3 +58,11 @@ def DobavitVMnozhestvoElement(M: list, element: int) -> None:
 
     M[0] += 1
     M[M[0]] = element
+
+def DostatIzMnozhestva(M: list, index: int) -> int:
+    if M[0] < index: raise Exception(f"Во множестве {M} нет элемента с индексом {index}")
+
+    element = M[index]
+    UdalitIzMnozhestva(M, element)
+
+    return element
