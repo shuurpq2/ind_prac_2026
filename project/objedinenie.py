@@ -1,4 +1,4 @@
-from module import *
+from module import PROBEL, SdelatMnozhestvoPustym, DobavitVMnozhestvoElement, DostatIzMnozhestva
 
 NA = 4
 A = [PROBEL] * (NA+1) # Создаем ряд A длиной NA+1 и заполняем
