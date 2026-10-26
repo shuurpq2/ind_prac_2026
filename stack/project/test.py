@@ -55,3 +55,29 @@ def TestStackNePust():
     print(f"Ответ функции 'СтекНеПуст' при не пустом стеке: {StackNePust(S)}") # Вызываем проверяемую функцию и тут же выводим ответ
 
 TestStackNePust()
+
+def TestDobavitVStack():
+    N = 3
+    S = [" "] * (N+1) # Создаем ряд длиной N+1 для возможности индексации от 1 до N
+    S[0] = 0
+
+    print(f"Изначальная длина стека: {len(S)}")
+    print(f"Изначальное значение служебного элемента: {S[0]}")
+
+    element = 7
+    DobavitVStack(S, N, element)
+
+    print(f"Новая длина стека: {len(S)}")
+    print(f"Новое значение служебного элемента: {S[0]}")
+    print(f"Пытались добавить элемент {element}, а добавился: {S[1]}")
+
+    DobavitVStack(S, N, element)
+    DobavitVStack(S, N, element)
+
+    try :
+        DobavitVStack(S, N, element)
+        print("Переполнения не случилось")
+    except:
+        print("Успешное переполнение стека")
+
+TestDobavitVStack()
