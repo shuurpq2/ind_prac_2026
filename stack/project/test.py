@@ -160,3 +160,8 @@ def TestUdalitIzStacka():
     print(f"Новое значение служебного элемента: {S[0]}")
 
 TestUdalitIzStacka()
+
+def TestZavershitRabotu():
+    ZavershitRabotu()
+
+TestZavershitRabotu()

@@ -39,3 +39,6 @@ def VershinaStacka(S: list) -> int:
 def UdalitIzStacka(S: list) -> None:
     if StackNePust(S):
         S[0] -= 1
+
+def ZavershitRabotu() -> None:
+    print("Работа завершена")
