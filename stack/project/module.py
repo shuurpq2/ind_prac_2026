@@ -6,3 +6,6 @@ def SdelatStackPustym(S: list) -> None:
 
 def StackPust(S: list) -> bool:
     return S[0] == 0
+
+def StackNePust(S: list) -> bool:
+    return S[0] != 0
