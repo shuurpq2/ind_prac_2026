@@ -146,3 +146,17 @@ def TestVershinaStacka():
     print(f"Новое значение служебного элемента: {S[0]}")
 
 TestVershinaStacka()
+
+def TestUdalitIzStacka():
+    N = 1
+    S = [" "] * (N+1) # Создаем ряд длиной N+1 для возможности индексации от 1 до N
+    S[0] = 1
+    S[1] = 3
+
+    print(f"Изначальная длина стека: {len(S)}")
+    print(f"Изначальное значение служебного элемента: {S[0]}")
+    UdalitIzStacka(S)
+    print(f"Новая длина стека: {len(S)}")
+    print(f"Новое значение служебного элемента: {S[0]}")
+
+TestUdalitIzStacka()
