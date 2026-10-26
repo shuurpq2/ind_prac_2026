@@ -30,3 +30,8 @@ def DostatIzStacka(S: list) -> int:
     S[0] -= 1
 
     return S[S[0]+1]
+
+def VershinaStacka(S: list) -> int:
+    if StackPust(S):
+        return
+    return S[S[0]]
