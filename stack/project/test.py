@@ -56,31 +56,31 @@ def TestStackNePust():
 
 TestStackNePust()
 
-# def TestDobavitVStack():
-#     N = 3
-#     S = [" "] * (N+1) # Создаем ряд длиной N+1 для возможности индексации от 1 до N
-#     S[0] = 0
+def TestDobavitVStack():
+    N = 3
+    S = [" "] * (N+1) # Создаем ряд длиной N+1 для возможности индексации от 1 до N
+    S[0] = 0
 
-#     print(f"Изначальная длина стека: {len(S)}")
-#     print(f"Изначальное значение служебного элемента: {S[0]}")
+    print(f"Изначальная длина стека: {len(S)}")
+    print(f"Изначальное значение служебного элемента: {S[0]}")
 
-#     element = 7
-#     DobavitVStack(S, N, element)
+    element = 7
+    DobavitVStack(S, N, element)
 
-#     print(f"Новая длина стека: {len(S)}")
-#     print(f"Новое значение служебного элемента: {S[0]}")
-#     print(f"Пытались добавить элемент {element}, а добавился: {S[1]}")
+    print(f"Новая длина стека: {len(S)}")
+    print(f"Новое значение служебного элемента: {S[0]}")
+    print(f"Пытались добавить элемент {element}, а добавился: {S[1]}")
 
-#     DobavitVStack(S, N, element)
-#     DobavitVStack(S, N, element)
+    DobavitVStack(S, N, element)
+    DobavitVStack(S, N, element)
 
-#     try :
-#         DobavitVStack(S, N, element)
-#         print("Переполнения не случилось")
-#     except:
-#         print("Успешное переполнение стека")
+    try :
+        DobavitVStack(S, N, element)
+        print("Переполнения не случилось")
+    except:
+        print("Успешное переполнение стека")
 
-# TestDobavitVStack()
+TestDobavitVStack()
 
 def TestEstSvobodnoeMesto():
     N = 1
@@ -99,3 +99,21 @@ def TestEstSvobodnoeMesto():
     print(f"Ответ функции 'ЕстьСвободноеМесто' при полном стеке: {EstSvobodnoeMesto(S, N)}") # Вызываем проверяемую функцию и тут же выводим ответ
 
 TestEstSvobodnoeMesto()
+
+def TestNetSvobodnogoMesta():
+    N = 1
+    S = [" "] * (N+1) # Создаем ряд длиной N+1 для возможности индексации от 1 до N
+    S[0] = 0
+
+    print(f"Изначальная длина стека: {len(S)}")
+    print(f"Изначальное значение служебного элемента: {S[0]}")
+    print(f"Ответ функции 'НетСвободногоМеста' при наличии свободного места в стеке: {NetSvobodnogoMesta(S, N)}") # Вызываем проверяемую функцию и тут же выводим ответ
+    print(f"Новая длина стека: {len(S)}")
+    print(f"Новое значение служебного элемента: {S[0]}")
+
+    S[0] = 1
+    S[1] = 3
+
+    print(f"Ответ функции 'НетСвободногоМеста' при полном стеке: {NetSvobodnogoMesta(S, N)}") # Вызываем проверяемую функцию и тут же выводим ответ
+
+TestNetSvobodnogoMesta()

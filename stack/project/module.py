@@ -13,8 +13,11 @@ def StackNePust(S: list) -> bool:
 def EstSvobodnoeMesto(S: list, N: int) -> bool:
     return S[0] < N
 
+def NetSvobodnogoMesta(S: list, N: int) -> bool:
+    return S[0] >= N
+
 def DobavitVStack(S: list, N: int, element: int) -> None:
-    if EstSvobodnoeMesto(S, N):
+    if NetSvobodnogoMesta(S, N):
         raise Exception("Переполнение стека")
 
     S[0] += 1
