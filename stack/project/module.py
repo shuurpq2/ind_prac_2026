@@ -22,3 +22,11 @@ def DobavitVStack(S: list, N: int, element: int) -> None:
 
     S[0] += 1
     S[S[0]] = element
+
+def DostatIzStacka(S: list) -> int:
+    if StackPust(S):
+        return
+    
+    S[0] -= 1
+
+    return S[S[0]+1]
