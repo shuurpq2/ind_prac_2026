@@ -1,4 +1,4 @@
-from module import PROBEL, SdelatMnozhestvoPustym, DobavitVMnozhestvoElement, DostatIzMnozhestva
+from module import PROBEL, SdelatMnozhestvoPustym, DobavitVMnozhestvoElement, DostatIzMnozhestva, MnozhestvoNePusto
 
 NA = 4
 A = [PROBEL] * (NA+1) # Создаем ряд A длиной NA+1 и заполняем
@@ -23,9 +23,9 @@ print(f"Множество B: {B}")
 R = [PROBEL] * (NA+NB+1) # Создаем результирующий ряд R длиной NA+NB+1, так как это максимально возможная его длина
 SdelatMnozhestvoPustym(R)
 
-while A[0] > 0:
-    DobavitVMnozhestvoElement(R, DostatIzMnozhestva(A, 1))
-while B[0] > 0:
-    DobavitVMnozhestvoElement(R, DostatIzMnozhestva(B, 1))
+while MnozhestvoNePusto(A):
+    DobavitVMnozhestvoElement(R, DostatIzMnozhestva(A))
+while MnozhestvoNePusto(B):
+    DobavitVMnozhestvoElement(R, DostatIzMnozhestva(B))
 
 print(f"Результат объединения A и B: {R}")

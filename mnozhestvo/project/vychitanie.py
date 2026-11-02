@@ -1,4 +1,4 @@
-from module import PROBEL, SdelatMnozhestvoPustym, DobavitVMnozhestvoElement, UdalitIzMnozhestva, DostatIzMnozhestva
+from module import PROBEL, SdelatMnozhestvoPustym, DobavitVMnozhestvoElement, UdalitIzMnozhestva, DostatIzMnozhestva, MnozhestvoNePusto
 
 NA = 4
 A = [PROBEL] * (NA+1) # Создаем ряд A длиной NA+1 и заполняем
@@ -20,7 +20,7 @@ DobavitVMnozhestvoElement(B, 2)
 print(f"Множество A: {A}")
 print(f"Множество B: {B}")
 
-while B[0] > 0:
-    UdalitIzMnozhestva(A, DostatIzMnozhestva(B, 1))
+while MnozhestvoNePusto(B):
+    UdalitIzMnozhestva(A, DostatIzMnozhestva(B))
 
 print(f"Результат вычитания B из A: {A}")

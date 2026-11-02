@@ -59,13 +59,13 @@ def DobavitVMnozhestvoElement(M: list, element: int) -> None:
     M[0] += 1
     M[M[0]] = element
 
-def DostatIzMnozhestva(M: list, element: int) -> int:
-    se = M[0]
-    UdalitIzMnozhestva(M, element)
+def DostatIzMnozhestva(M: list) -> int:
+    if M[0] < 1: raise Exception(f"Множсетво {M} не содержит элементов")
 
-    if M[0] == se: raise Exception(f"Во множестве {M} нет элемента {element}")
+    e = M[1]
+    UdalitIzMnozhestva(M, e)
 
-    return element
+    return e
 
 def ZavershitRabotu() -> None:
     print("Работа завершена")
